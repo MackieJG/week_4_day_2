@@ -26,5 +26,8 @@ found_one = artist_repository.select(artist_1.id)
 found_album = album_repository.select(album_1.id)
 all_albums_BOC = artist_repository.all_albums(artist_1)
 
+artist_1.name = "Mogwai"
+artist_repository.update(artist_1)
+
 pdb.set_trace()
 
