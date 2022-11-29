@@ -34,3 +34,14 @@ def save(album):
     id = results[0]['id']
     album.id = id
     return album
+
+def update_title(album):
+    sql = "UPDATE albums SET title = %s WHERE id =  %s"
+    values = [album.title, album.id]
+    run_sql(sql, values)
+
+def delete_album(album):
+    sql = "DELETE * FROM albums WHERE title = %s"
+    values = [album.title, album.id]
+    run_sql(sql, values)
+
